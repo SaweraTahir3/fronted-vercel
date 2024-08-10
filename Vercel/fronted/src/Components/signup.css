@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.signupPage {
+  display: flex;
+  align-items: center;
+}
+
+.signupImage {
+  max-width: 40%;
+  height: auto;
+  margin-left: 10rem;
+}
+
+.addUser {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 45px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 21px gray;
+}
+
+.addUserForm .inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.addUserForm .inputGroup label {
+  margin-top: 10px;
+}
+
+.addUserForm .inputGroup input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputGroup button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8DC63F;
+  color: white;
+  cursor: pointer;
+}
+
+.inputGroup button:hover {
+  background-color: #8DC63F;
+}
+
+.signup {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.signup a {
+  text-decoration: none; /* Remove underline in signup link */
+}
+
+.login {
+  text-align: center; /* Center the login button */
+}
+
+.login .btn.btn-primary {
+  width: auto; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0D6DB7;
+  color: white;
+  cursor: pointer;
+}
+
+.login .btn.btn-primary:hover {
+  background-color: #8DC63F; /* Green hover color */
+}
+
+.addUser h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #0D6DB7;
+  text-transform: uppercase;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .signupPage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signupImage {
+    margin-left: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .addUser {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .signupPage {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .signupImage {
+    margin-left: 10rem;
+  }
+
+  .addUser {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .addUser {
+    width: 40%;
+  }
+}
+
+.text-danger {
+  color: red;
+}
