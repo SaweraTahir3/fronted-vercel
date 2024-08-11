@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Button, Typography, Container, Grid, Paper, Box, useMediaQuery, useTheme, CircularProgress, Link as MuiLink } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import Result from './Result';
-import { UserContext } from '../context/UserContext'; // Assuming you have a UserContext
-
+ // Assuming you have a UserContext
+import {UserContext} from '../Components/User/Usercontext'
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
