@@ -4,7 +4,7 @@ import { Button, Typography, Container, Grid, Paper, Box, useMediaQuery, useThem
 import { Link, useLocation } from 'react-router-dom';
 import Result from './Result';
  // Assuming you have a UserContext
-import {UserContext} from '../Components/User/Usercontext'
+import {UserContext} from '../components/User/Usercontext'
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
