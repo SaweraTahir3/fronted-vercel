@@ -11,7 +11,7 @@ const AddQuestion = () => {
   const [correct, setCorrect] = useState('');
 
   const handleAddQuestion = () => {
-    axios.post('http://localhost:5000/api/v1/Students/add-question', { question, a, b, c, d, correct })
+    axios.post('https://smit1backend-sawera-tahirs-projects.vercel.app/api/v1/Students/add-question', { question, a, b, c, d, correct })
       .then(response => {
         alert('Question added successfully!');
        

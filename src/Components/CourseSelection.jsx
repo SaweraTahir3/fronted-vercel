@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 
 const CourseSelection = () => {
 
-  const baseURL = 'https://smit1backend-sawera-tahirs-projects.vercel.app'
   const [subjects, setSubjects] = useState([]);
   const [selectedSubject, setSelectedSubject] = useState('');
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ const CourseSelection = () => {
 
     const fetchSubjects = async () => {
       try {
-        const response = await axios.get(`${{baseURL}}/api/questions`);
+        const response = await axios.get(`https://smit1backend-sawera-tahirs-projects.vercel.app/api/questions`);
         const uniqueSubjects = [...new Set(response.data.map(q => q.subject))];
         setSubjects(uniqueSubjects);
       } catch (error) {

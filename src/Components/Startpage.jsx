@@ -26,7 +26,7 @@ const Startpage = () => {
 
   //   const fetchSubjects = async () => {
   //     try {
-  //       const response = await axios.get('http://localhost:5000/api/questions');
+  //       const response = await axios.get('https://smit1backend-sawera-tahirs-projects.vercel.app/api/questions');
   //       const uniqueSubjects = [...new Set(response.data.map(q => q.subject))];
   //       setSubjects(uniqueSubjects);
   //     } catch (error) {
