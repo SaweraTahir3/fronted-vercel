@@ -26,7 +26,7 @@ const Quiz = () => {
     const fetchQuestions = async () => {
       try {
         const response = await axios.get('https://smit1backend-sawera-tahirs-projects.vercel.app/api/questions');
-        const filteredQuestions = response.data.filter(q => q.subject === subject);
+        const filteredQuestions = response.data.filter(q => q.subject.trim().toLowerCase() === subject.trim().toLowerCase());
         setQuestions(filteredQuestions);
         setLoading(false);
       } catch (error) {
@@ -103,6 +103,9 @@ const Quiz = () => {
 
   if (loading) {
     return <Typography>Loading questions...</Typography>;
+  }
+  if (questions.length === 0) {
+    return <Typography>No questions available for this subject.</Typography>;
   }
 
   if (showResult) {
