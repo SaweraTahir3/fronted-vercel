@@ -13,25 +13,66 @@ import logo from './smit.png';
 const theme = createTheme({
   typography: {
     h4: {
-      fontSize: "3.9rem",
+      fontSize: "3rem",
+      [createTheme().breakpoints.down('md')]: {
+        fontSize: "2.5rem",
+        lineHeight: "1.2",
+        fontWeight: 400,
+      },
+      [createTheme().breakpoints.down('sm')]: {
+        fontSize: "2rem",
+        lineHeight: "1.2",
+        fontWeight: 300,
+      },
     },
     h5: {
-      fontSize: "2.9rem",
+      fontSize: "2rem",
+      [createTheme().breakpoints.down('md')]: {
+        fontSize: "2rem",
+        lineHeight: "1.3",
+        fontWeight: 400,
+      },
+      [createTheme().breakpoints.down('sm')]: {
+        fontSize: "1.8rem",
+        lineHeight: "1.2",
+        fontWeight: 300,
+      },
     },
     body2: {
       fontSize: "1.7rem",
+      [createTheme().breakpoints.down('md')]: {
+        fontSize: "1.5rem",
+        lineHeight: "1.4",
+        fontWeight: 400,
+      },
+      [createTheme().breakpoints.down('sm')]: {
+        fontSize: "1rem",
+        lineHeight: "1.3",
+        fontWeight: 300,
+      },
     },
     body1: {
       fontSize: "1.2rem",
+      [createTheme().breakpoints.down('md')]: {
+        fontSize: "1rem",
+        lineHeight: "1.5",
+        fontWeight: 400,
+      },
+      [createTheme().breakpoints.down('sm')]: {
+        fontSize: "0.9rem",
+        lineHeight: "1.4",
+        fontWeight: 300,
+      },
     },
   },
 });
 
+// Now you can use the theme in your component
 const FirstPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box display="flex" flexDirection="column" minHeight="100vh">
-        <AppBar position="static" >
+        <AppBar position="static">
           <Toolbar sx={{ backgroundColor: "white" }}>
             <img
               alt="SMIT Logo"
@@ -57,87 +98,70 @@ const FirstPage = () => {
             justifyContent: "center",
             flexGrow: 1,
             textAlign: "center",
-            // mt:" 5rem",
           }}
         >
-          {/* <div className="part"> */}
-            <Box mt={1}>
-              <Typography
-                variant="h4"
-                component="h1"
-                gutterBottom
-                color="primary"
-                style={{
-                  lineHeight: "80px",
-                  fontWeight: "100",
-                  fontSize: "70px",
-                  position: " absoulate",
-                  top: "0px",
-                }}
-              >
-                Quiz Application
-              </Typography>
-            </Box>
+          <Box mt={1}>
             <Typography
-              variant="h5"
-              component="h2"
+              variant="h3"
+              component="h1"
               gutterBottom
+              color="primary"
               style={{
-                lineHeight: "70px",
-                fontSize: "50px",
-                marginLeft: "auto",
+             
+                position: "absoulate",
+                top: "0px",
               }}
             >
-              Saylani Mass IT Training Program
+              Quiz Application
             </Typography>
-            <Typography
-              variant="body2"
-              gutterBottom
-              style={{
-                lineHeight: "60px",
-                fontSize: "15px",
-                marginLeft: "auto",
-              }}
+          </Box>
+          <Typography
+            variant="h4"
+            component="h2"
+            gutterBottom
+            style={{
+              marginLeft: "auto",
+            }}
+          >
+            Saylani Mass IT Training Program
+          </Typography>
+          <Typography
+            variant="body2"
+            gutterBottom
+            style={{
+              marginLeft: "auto",
+            }}
+          >
+            Saylani Mass IT Training program is an institute that delivers the
+            latest IT education (FREE OF COST).
+          </Typography>
+          <Typography
+            variant="body2"
+            gutterBottom
+        
+          >
+            Saylani Mass Training Department is one of the departments that is
+            running under Saylani Welfare Trust Management.
+          </Typography>
+          <Box mt={4} sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
+            <Button
+              component={Link}
+              to="/signup"
+              variant="contained"
+              color="primary"
             >
-              {/* Saylani Mass Training Department is one of the departments that is running under Saylani Welfare Trust Management. */}
-              Saylani Mass IT Training program is an institute that delivers the
-              latest IT education (FREE OF COST).
-            </Typography>
-            <Typography
-              variant="body2"
-              gutterBottom
-              style={{
-                fontSize: "15px",
-                lineHeight: "60px",
-                marginLeft: "auto",
-                fontWeight: "100",
-              }}
-            >
-              Saylani Mass Training Department is one of the departments that is
-              running under Saylani Welfare Trust Management.
-              {/* Saylani Mass IT Training program is an institute that delivers the latest IT education (FREE OF COST). */}
-            </Typography>
-            <Box mt={4} sx={{ display: "flex", flexDirection: "row", gap: 2}}>
-              <Button
-                component={Link}
-                to="/signup"
-                variant="contained"
-                color="primary"
-               
-              >
-                Student Portal
-              </Button>
+              Student Portal
+            </Button>
 
-              <Button
-               component={Link}
-                to="/AdminLogin"
-                variant="contained"
-                color="primary"
-              >
-                Admin Portal
-              </Button>
-            </Box>
-          {/* </div> */}
+            <Button
+              component={Link}
+              to="/AdminLogin"
+              variant="contained"
+              color="primary"
+            >
+              Admin Portal
+            </Button>
+          </Box>
         </Container>
       </Box>
     </ThemeProvider>
